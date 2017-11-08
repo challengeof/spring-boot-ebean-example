@@ -83,12 +83,6 @@
         </dependency>
 
         <dependency>
-            <groupId>net.caidingke</groupId>
-            <artifactId>shepherd-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.ebean</groupId>
             <artifactId>ebean</artifactId>
         </dependency>

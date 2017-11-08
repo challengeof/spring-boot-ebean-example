@@ -8,7 +8,6 @@ import io.ebean.Model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import net.caidingke.shepherd.common.utils.mapper.JsonMapper;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -40,10 +39,6 @@ public class BaseModel extends Model {
     @SuppressWarnings("unchecked")
     public Map<String, Object> toMap() {
         return (Map<String, Object>) mapper.convertValue(this, Map.class);
-    }
-
-    public String toJson() {
-        return JsonMapper.INSTANCE.toJson(this);
     }
 
     public static <T> T restore(Map map, Class<T> clazz) {
